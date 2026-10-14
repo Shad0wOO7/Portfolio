@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { navLinks, profile } from "../data/content";
+import { navLinks } from "../data/content";
+import ShadowLogo from "./ShadowLogo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,13 +20,15 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-black text-sm font-bold text-white">
-            {profile.initials}
-          </span>
-          <span className="text-sm font-semibold tracking-tight text-black">
-            Edi<span className="text-[#7C3AED]">.</span>TUTONDA
-          </span>
+        <a
+          href="#top"
+          className="group flex items-center transition-opacity hover:opacity-85"
+          aria-label="SHADOW - Accueil"
+        >
+          <ShadowLogo
+            variant="inline"
+            className="h-6 w-auto text-black transition-colors duration-300 group-hover:text-[#7C3AED] sm:h-7"
+          />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">

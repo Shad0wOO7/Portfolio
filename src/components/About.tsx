@@ -1,4 +1,5 @@
 import { aboutHighlights, profile } from "../data/content";
+import ShadowEmblem from "./ShadowEmblem";
 
 export default function About() {
   return (
@@ -15,19 +16,22 @@ export default function About() {
 
         <div className="grid gap-16 lg:grid-cols-5 lg:gap-12">
           <div className="lg:col-span-2">
-            <div className="relative mx-auto max-w-sm overflow-hidden rounded-3xl border border-gray-100 bg-gray-50/60">
+            <div className="relative mx-auto max-w-sm overflow-hidden rounded-3xl border border-gray-100 bg-gray-50/60 shadow-sm">
               <img
                 src="/images/avatar.png"
                 alt={profile.name}
                 className="h-full w-full object-cover"
               />
+              <div className="absolute bottom-3 right-3 flex items-center gap-2 rounded-full border border-white/15 bg-black/90 px-3 py-1 text-xs font-semibold text-white shadow-lg backdrop-blur-md">
+                <ShadowEmblem className="h-3.5 w-3.5 text-[#7C3AED]" />
+                <span className="tracking-wide">SHADOW</span>
+              </div>
             </div>
           </div>
 
           <div className="lg:col-span-3">
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
-              Je m'appelle <span className="font-semibold text-black">Edi TUTONDA</span>, étudiant en
-              informatique en{" "}
+              Je m'appelle <span className="font-semibold text-black">Edi TUTONDA</span> (connu sous le pseudonyme <span className="font-semibold text-black">SHADOW</span> en cybersécurité), étudiant en{" "}
               <span className="font-medium text-black">République Démocratique du Congo</span>. Mon
               parcours s'articule autour du génie logiciel, mais mes centres d'intérêt vont bien
               au-delà : je m'intéresse profondément à la{" "}

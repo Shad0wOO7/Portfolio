@@ -1,4 +1,5 @@
 import { skillCategories } from "../data/content";
+import ShadowEmblem from "./ShadowEmblem";
 
 export default function Skills() {
   return (
@@ -23,7 +24,15 @@ export default function Skills() {
               className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#7C3AED]/40 hover:shadow-lg hover:shadow-violet-100"
             >
               <div className="flex items-start justify-between">
-                <h3 className="text-lg font-semibold text-black">{cat.title}</h3>
+                <div className="flex items-center gap-2.5">
+                  <h3 className="text-lg font-semibold text-black">{cat.title}</h3>
+                  {cat.title === "Cybersécurité" && (
+                    <span className="inline-flex items-center gap-1 rounded-md bg-black px-2 py-0.5 text-[10px] font-semibold tracking-wider text-white">
+                      <ShadowEmblem className="h-2.5 w-2.5 text-[#7C3AED]" />
+                      SHADOW
+                    </span>
+                  )}
+                </div>
                 <span className="text-sm font-semibold text-gray-300 transition-colors group-hover:text-[#7C3AED]">
                   {cat.number}
                 </span>
