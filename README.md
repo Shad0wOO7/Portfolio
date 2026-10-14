@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/shadow-logo-stacked.svg" alt="SHADOW Logo" width="220" />
+  <img src="public/shadow-logo.jpg" alt="SHADOW Logo" width="260" style="border-radius: 16px;" />
 
   # SHADOW · Edi TUTONDA
   ### Informaticien — Développement Logiciel · IA · Cybersécurité
